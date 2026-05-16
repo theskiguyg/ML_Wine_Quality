@@ -5,7 +5,7 @@ ENV/
 
 # Данные
 # data/raw/
-# data/processed/
+data/processed/
 
 # Модели
 *.pkl
