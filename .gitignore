@@ -1,21 +1,21 @@
-# Виртуальное окружение
+# VENV
 .venv/
 venv/
 ENV/
 
-# Данные
+# Data
 # data/raw/
 data/processed/
 
-# Модели
+# Models
 *.pkl
 *.joblib
 
-# Логи MLflow
+# Logs MLFlow
 mlruns/
 logs/
 
-# Python кэш
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
@@ -25,7 +25,7 @@ __pycache__/
 .idea/
 .DS_Store
 
-# Секреты
+# Secrets
 .env
 
 # Jupyter
