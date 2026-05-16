@@ -1,6 +1,9 @@
 # Wine Quality Prediction
 
-The project has been created by Zagrebin Egor, NUST MISIS AI "29. 
+Created by Zagrebin Egor as part of the ML Engineering course based on the book "Hands-On Machine Learning" (Aurélien Géron, 1st edition, 2017). 
+
+Goal: Building an end-to-end production-ready ML solution with clean code, configuration, and reproducibility. 
+
 
 ## 📦 Installation and launch
 
