@@ -4,8 +4,8 @@ venv/
 ENV/
 
 # Данные
-data/raw/
-data/processed/
+# data/raw/
+# data/processed/
 
 # Модели
 *.pkl
