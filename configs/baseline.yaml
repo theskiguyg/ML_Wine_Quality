@@ -1,0 +1,9 @@
+data:
+  path:
+
+
+preprocess:
+  scale_cols: ["alcohol", "pH", "density", "citric acid", "sulphates", "fixed acidity", "volatile acidity"]
+  log_cols: ["residual sugar", "chlorides", "total sulfur dioxide", "free sulfur dioxide"]
+  
+
