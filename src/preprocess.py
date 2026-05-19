@@ -4,7 +4,7 @@ from sklearn.compose import ColumnTransformer
 import numpy as np
 
 def get_preprocessor(config):
-    """ Preprocessor for EDA and comparison scaled data with stock data"""
+    """Creating data preprocessor"""
     scale_cols = config['preprocess'].get('scale_cols', [])
     log_cols = config['preprocess'].get('log_cols', [])
     
