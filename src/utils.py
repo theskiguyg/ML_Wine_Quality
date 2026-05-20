@@ -11,7 +11,7 @@ def load_model(model_path):
         raise FileNotFoundError(f"Model not found: {model_path}")
     return joblib.load(model_path)
 
-def save_model(model, model_path):
-    os.makedirs(os.path.dirname(model_path), exist_ok=True)
-    joblib.dump(model, model_path)
-    print(f"✅ Model saved to {model_path}")
+def save_model(pipeline, save_path):
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    joblib.dump(pipeline, save_path)
+    print(f"✅ Model saved to {save_path}")
