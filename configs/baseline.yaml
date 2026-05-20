@@ -1,5 +1,36 @@
+mode: "train"
+# train, cross_val, grid_search, save
+
+
+using_model: 'LinearRegression'
+model_save_path: 'models/best_model.pdk'
+
+models:
+  LinearRegression: 
+  RandomForestRegressor:
+    max_iter: 1000
+  Ridge:
+  Lasso:
+  GradientBoostingRegressor:
+
+cross_val:
+  KFold: 
+    n_splits: 10
+    shuffle: True
+    random_state: 42
+  scoring: 'neg_mean_squared_error'
+
+grid_search:
+  cv: 5
+  scoring: 'neg_mean_squared_error'
+  param_grid: 
+
+
+
+
 data:
-  path:
+  X_train_path: 'data/processed/X_train.csv'
+  y_train_path: 'data/processed/y_train.csv'
 
 
 preprocess:
