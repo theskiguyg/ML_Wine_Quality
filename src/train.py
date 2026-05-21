@@ -42,6 +42,7 @@ def start_train(config_path):
         predictions = final_pipeline.predict(X_train)
         scoring = r2_score(y_train, predictions)
         print(f"R2 scoring: {scoring}")
+        print('Model is not saved!')
     elif mode == 'cross_val':
         print("CrossValidation mode is selected.")
         kfold = KFold(**config['cross_val']['KFold'])
