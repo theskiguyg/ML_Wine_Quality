@@ -1,0 +1,11 @@
+mode: 'predict'
+# predict, submit
+
+data: 
+  X_test_path: 'data/processed/X_test.csv'
+  y_test_path: 'data/processed/y_test.csv'
+
+inference_model_path: 'models/random_forest.pkl'
+
+submission_path: 'data/submissions/submission.csv'
+
