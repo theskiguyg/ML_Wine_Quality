@@ -1,32 +1,46 @@
-mode: "train"
+mode: "save"
 # train, cross_val, grid_search, save
 
-using_model: 'LinearRegression'
-model_save_path: 'models/best_model.pdk'
+using_model: 'RandomForestRegressor'
+model_save_path: 'models/random_forest.pkl'
 
 models:
   LinearRegression: {}
-  RandomForestRegressor: {}
+  RandomForestRegressor:
+    max_depth: 10
+    max_features: "sqrt"
+    min_samples_leaf: 5
+    min_samples_split: 10
+    n_estimators: 50
   Ridge: {}
   Lasso: {}
   GradientBoostingRegressor: {}
+
 
 cross_val:
   KFold: 
     n_splits: 10
     shuffle: True
     random_state: 42
-  scoring: 'r2_score'
+  scoring: 'r2'
 
 grid_search:
   cv: 5
-  scoring: 'r2_score'
+  scoring: 'r2'
   param_grid: 
+    model__max_depth: [3, 5]
+    model__min_samples_split: [10]
+    # model__min_samples_leaf: [5, 10]
+    model__n_estimators: [50, 100]
+    model__learning_rate: [0.05, 0.03, 0.02]
+    model__subsample: [0.8]
+    # model__max_features: ["sqrt"]
 
 
 data:
   X_train_path: 'data/processed/X_train.csv'
   y_train_path: 'data/processed/y_train.csv'
+
 
 
 preprocess:
